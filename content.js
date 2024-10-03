@@ -41,4 +41,5 @@ function jumpURL(url){
 
             //bodyが新しく変化したため、もう一度リンクの収集を行いなおす
             main();
+        })
 }
