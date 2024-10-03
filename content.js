@@ -5,7 +5,10 @@ const recieveMessage = (MessageToReceive,Efunction) => {
             sendResponse({status: 'done'});
         }
     });
+}
 let preloads = {};
 main();
+async function main(){
+}
 }
 }
