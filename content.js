@@ -43,6 +43,19 @@ async function Preload(hrefs){
 }
     
 function jumpURL(url){
+
+    if(preloads[url]){
+        //事前読込を使用
+        const tmphtml = document.createElement("div");
+        tmphtml.innerHTML = preloads[url];
+        
+        //実際に反映
+        console.log("事前読込を使用");
+        document.body.innerHTML = `${tmphtml.innerHTML}`;
+
+        //bodyが新しく変化したため、もう一度リンクの収集を行いなおす
+        main();
+    }else{
         fetch(url,{method : "GET"})
         .then(res => {
             return res.text();
@@ -63,4 +76,5 @@ function jumpURL(url){
             console.log("非同期読込に失敗した代わりに遷移")
             window.location.href = url;
         })
+    }
 }
