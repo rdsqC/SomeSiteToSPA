@@ -22,7 +22,24 @@ async function main(){
             jumpURL(hrefs[index]);
         })
     })
+    Preload(preloadHref);
 }
+
+async function Preload(hrefs){
+    for(let i = 0;i < hrefs.length;++i){
+        
+        console.log(hrefs[i]);
+        fetch(hrefs[i],{method:"GET"})
+        .then(res => {
+            return res.text();
+        })
+        .then(htmltext => {
+            preloads[hrefs[i]] = htmltext;
+        })
+        .catch(() =>
+            console.log("事前読込失敗")
+        )
+    }
 }
     
 function jumpURL(url){
