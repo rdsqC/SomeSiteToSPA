@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "ChromeExtensions",
+    "version":"0.1.0",
+    "description":"説明をここに書く",
+    "permissions":[
+        "tabs",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker":"background.js"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+        }
+    }
+}
