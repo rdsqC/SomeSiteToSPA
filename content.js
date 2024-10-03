@@ -14,6 +14,7 @@ async function main(){
     for(anker of ankers){
         hrefs.push(anker.href || null);
     }
+    const preloadHref = structuredClone(hrefs);
 }
 }
 }
