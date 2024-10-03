@@ -22,7 +22,7 @@ async function main(){
             jumpURL(hrefs[index]);
         })
     })
-    Preload(preloadHref);
+    //Preload(preloadHref);
 }
 
 async function Preload(hrefs){
