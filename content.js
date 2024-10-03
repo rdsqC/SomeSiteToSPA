@@ -77,4 +77,7 @@ function jumpURL(url){
             window.location.href = url;
         })
     }
+
+    //履歴にリンクを追加
+    history.pushState("","",url);
 }
