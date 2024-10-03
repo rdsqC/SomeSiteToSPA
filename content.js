@@ -19,8 +19,11 @@ async function main(){
         anker.href = "javascript:void(0);";
         anker.addEventListener("click",(event) => {
             event.preventDefault();
+            jumpURL(hrefs[index]);
         })
     })
 }
 }
+    
+function jumpURL(url){
 }
