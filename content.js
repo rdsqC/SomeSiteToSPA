@@ -42,4 +42,8 @@ function jumpURL(url){
             //bodyが新しく変化したため、もう一度リンクの収集を行いなおす
             main();
         })
+        .catch(() => {
+            console.log("非同期読込に失敗した代わりに遷移")
+            window.location.href = url;
+        })
 }
