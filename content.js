@@ -9,6 +9,11 @@ const recieveMessage = (MessageToReceive,Efunction) => {
 let preloads = {};
 main();
 async function main(){
+    let hrefs = [];
+    const ankers = document.querySelectorAll("a");
+    for(anker of ankers){
+        hrefs.push(anker.href || null);
+    }
 }
 }
 }
