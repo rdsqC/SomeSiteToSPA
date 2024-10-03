@@ -39,4 +39,6 @@ function jumpURL(url){
             console.log("非同期読込を使用")
             document.body.innerHTML = `${tmphtml.innerHTML}`;
 
+            //bodyが新しく変化したため、もう一度リンクの収集を行いなおす
+            main();
 }
