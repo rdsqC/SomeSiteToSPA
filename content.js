@@ -26,4 +26,17 @@ async function main(){
 }
     
 function jumpURL(url){
+        fetch(url,{method : "GET"})
+        .then(res => {
+            return res.text();
+        })
+        .then(htmltext => {
+            //一次要素に取得したhtmlを入れて適切に取り出す
+            const tmphtml = document.createElement("div");
+            tmphtml.innerHTML = htmltext;
+            
+            //実際に反映
+            console.log("非同期読込を使用")
+            document.body.innerHTML = `${tmphtml.innerHTML}`;
+
 }
